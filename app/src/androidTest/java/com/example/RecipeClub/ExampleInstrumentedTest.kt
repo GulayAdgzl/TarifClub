@@ -1,4 +1,4 @@
-package com.example.tarifklub
+package com.example.RecipeClub
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

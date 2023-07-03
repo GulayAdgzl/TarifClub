@@ -1,7 +1,8 @@
-package com.example.tarifklub
+package com.example.RecipeClub
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.tarifklub.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

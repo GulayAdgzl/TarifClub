@@ -1,4 +1,4 @@
-package com.example.tarifklub
+package com.example.RecipeClub
 
 import org.junit.Test
 
