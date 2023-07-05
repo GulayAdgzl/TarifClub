@@ -3,7 +3,7 @@ package com.example.RecipeClub.ui.list
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.RecipeClub.domain.FoodModel
+import com.example.RecipeClub.data.network.FoodModel
 
 
 enum class RecipesApiStatus {
