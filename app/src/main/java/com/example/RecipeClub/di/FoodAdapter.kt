@@ -1,5 +1,6 @@
 package com.example.RecipeClub.di
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -13,10 +14,13 @@ class FoodAdapter:ListAdapter<FoodModel,FoodAdapter.FoodViewHolder>(DiffCallBack
         parent:ViewGroup,
         viewType: Int,
     ):FoodAdapter.FoodViewHolder{
-
+        //ViewHolderin tanıtımı
+        return FoodViewHolder(FoodItemDesignBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
-    override fun onBindViewHolder(holder:FoodAdapter.FoodViewHolder,position:Int){
+    override fun onBindViewHolder(holder:FoodViewHolder,position:Int){
 
+        val food=getItem(position)
+        holder.bind(food)
     }
     class FoodViewHolder(private val binding:FoodItemDesignBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(food:FoodModel){

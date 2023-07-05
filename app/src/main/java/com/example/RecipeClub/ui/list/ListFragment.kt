@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.example.RecipeClub.R
 import com.example.RecipeClub.databinding.FragmentListBinding
+import com.example.RecipeClub.di.FoodAdapter
 
 class ListFragment : Fragment() {
     //first binding name
@@ -31,7 +32,7 @@ class ListFragment : Fragment() {
 
         binding.viewModel=viewModel
 
-        //binding.rvFood.adapter=
+        binding.rvFood.adapter=FoodAdapter()
     }
 
 }
