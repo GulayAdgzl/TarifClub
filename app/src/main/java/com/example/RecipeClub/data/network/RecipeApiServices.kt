@@ -22,10 +22,13 @@ private val retrofit= Retrofit.Builder()
     .baseUrl(BASE_URL)
     .build()
 
-interface RecipeApiServices{
+interface FoodApiServices{
     //@GET("/recipes/complexSearch")
     @GET("api/json/v1/1/list.php?i=list")
     suspend fun getFood():FoodResponse
 
+}
+object FoodApi{
+    val retrofitService:FoodApiServices by lazy { retrofit.create(FoodApiServices::class.java)}
 }
 

@@ -3,7 +3,10 @@ package com.example.RecipeClub.ui.list
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.RecipeClub.data.network.FoodApi
 import com.example.RecipeClub.data.network.FoodModel
+import kotlinx.coroutines.launch
 
 
 enum class RecipesApiStatus {
@@ -20,5 +23,23 @@ class ListViewModel: ViewModel() {
 
     private val _foods=MutableLiveData<List<FoodModel>>()
     val food:LiveData<List<FoodModel>>
-    get()=_foods
+      get()=_foods
+
+    init {
+        getFood()
+    }
+
+    private fun getFood() {
+        viewModelScope.launch {
+            _status.value=RecipesApiStatus.LOADING
+
+            try {
+                _foods.value=FoodApi.retrofitService.getFood().foods
+                _status.value=RecipesApiStatus.DONE
+            }catch (e:Exception){
+                _status.value=RecipesApiStatus.ERROR
+                _foods.value=ArrayList()
+            }
+        }
+    }
 }
