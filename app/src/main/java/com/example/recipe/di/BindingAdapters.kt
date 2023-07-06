@@ -1,4 +1,4 @@
-package com.example.RecipeClub.di
+package com.example.recipe.di
 
 import android.view.View
 import android.widget.ImageView
@@ -6,12 +6,12 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.RecipeClub.R
-import com.example.RecipeClub.data.network.FoodModel
-import com.example.RecipeClub.ui.list.RecipesApiStatus
+import com.example.recipe.R
+import com.example.recipe.data.network.FoodModel
+import com.example.recipe.ui.list.RecipesApiStatus
 
 @BindingAdapter("listData")
-fun bindRecyclerView(recyclerView: RecyclerView,data:List<FoodModel>){
+fun bindRecyclerView(recyclerView: RecyclerView,data:List<FoodModel>?){
     val adapter=recyclerView.adapter as FoodAdapter
     adapter.submitList(data)
 }

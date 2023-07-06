@@ -1,12 +1,13 @@
-package com.example.RecipeClub.di
+package com.example.recipe.di
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.RecipeClub.data.network.FoodModel
-import com.example.RecipeClub.databinding.FoodItemDesignBinding
+
+import com.example.recipe.data.network.FoodModel
+import com.example.recipe.databinding.FoodItemDesignBinding
 
 class FoodAdapter:ListAdapter<FoodModel,FoodAdapter.FoodViewHolder>(DiffCallBack){
 

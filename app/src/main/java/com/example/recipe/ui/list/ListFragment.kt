@@ -1,18 +1,16 @@
-package com.example.RecipeClub.ui.list
+package com.example.recipe.ui.list
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
-import com.example.RecipeClub.R
-import com.example.RecipeClub.databinding.FragmentListBinding
-import com.example.RecipeClub.di.FoodAdapter
+import com.example.recipe.databinding.FragmentListBinding
+import com.example.recipe.di.FoodAdapter
 
 class ListFragment : Fragment() {
     //first binding name
-    private lateinit var binding:FragmentListBinding
+    private lateinit var binding: FragmentListBinding
 
     private val viewModel:ListViewModel by lazy{ ListViewModel()}
     override fun onCreateView(
@@ -20,7 +18,7 @@ class ListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding=FragmentListBinding.inflate(inflater)
+        binding= FragmentListBinding.inflate(inflater)
         return binding.root
     }
 

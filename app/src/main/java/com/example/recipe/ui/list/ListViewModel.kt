@@ -1,11 +1,11 @@
-package com.example.RecipeClub.ui.list
+package com.example.recipe.ui.list
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.RecipeClub.data.network.FoodApi
-import com.example.RecipeClub.data.network.FoodModel
+import com.example.recipe.data.network.FoodApi
+import com.example.recipe.data.network.FoodModel
 import kotlinx.coroutines.launch
 
 
@@ -22,7 +22,7 @@ class ListViewModel: ViewModel() {
       get()=_status
 
     private val _foods=MutableLiveData<List<FoodModel>>()
-    val food:LiveData<List<FoodModel>>
+    val foods:LiveData<List<FoodModel>>
       get()=_foods
 
     init {

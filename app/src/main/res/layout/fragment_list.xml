@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.RecipeClub.ui.list.ListViewModel" />
+            type="com.example.recipe.ui.list.ListViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,7 +17,9 @@
             android:layout_width="0dp"
             android:id="@+id/rv_food"
             android:layout_height="0dp"
-            app:listData="@{viewModel.food}"
+            app:listData="@{viewModel.foods}"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

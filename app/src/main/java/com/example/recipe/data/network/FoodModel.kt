@@ -1,4 +1,4 @@
-package com.example.RecipeClub.data.network
+package com.example.recipe.data.network
 
 import com.squareup.moshi.Json
 

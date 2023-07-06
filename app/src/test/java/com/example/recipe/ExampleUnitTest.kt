@@ -1,4 +1,4 @@
-package com.example.RecipeClub
+package com.example.recipe
 
 import org.junit.Test
 

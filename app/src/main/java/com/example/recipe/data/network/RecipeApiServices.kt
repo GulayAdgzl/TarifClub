@@ -1,7 +1,7 @@
-package com.example.RecipeClub.data.network
+package com.example.recipe.data.network
 
 
-import com.example.RecipeClub.domain.FoodResponse
+import com.example.recipe.domain.FoodResponse
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
