@@ -22,6 +22,7 @@
             <ImageView
                 android:id="@+id/img_food"
                 android:layout_width="0dp"
+                app:strCategoryThumb="@{foodModel.strCategoryThumb}"
                 android:layout_height="250dp"
                 app:layout_constraintBottom_toTopOf="@+id/tv_name"
                 app:layout_constraintEnd_toEndOf="parent"
