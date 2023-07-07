@@ -8,6 +8,8 @@
 # Architecture  📜
 
 # Build With  🛠
-     [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
+     |Kotlin| Coroutines |
+     | -- |--|
+     |First class and official programming language for Android development.|  For asynchronous and more.|
 
 # Developed By 😎
