@@ -32,10 +32,10 @@ fun bindStatus(statusImageView: ImageView, status:RecipesApiStatus?){
 
     }
 }
-@BindingAdapter("strCategoryThumb")
-fun bindImage(imageView: ImageView,strCategoryThumb:String?){
-    strCategoryThumb?.let {
-        Glide.with(imageView.context).load(strCategoryThumb).apply(
+@BindingAdapter("imageUrl")
+fun bindImage(imageView: ImageView,imageUrl:String?){
+    imageUrl?.let {
+        Glide.with(imageView.context).load(imageUrl).apply(
             RequestOptions().placeholder(R.drawable.loading_animation).error(R.drawable.broken)
             ).into(imageView)
     }

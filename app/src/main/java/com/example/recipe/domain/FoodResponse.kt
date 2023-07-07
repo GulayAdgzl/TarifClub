@@ -4,6 +4,6 @@ import com.example.recipe.data.network.FoodModel
 import com.squareup.moshi.Json
 
 data class FoodResponse (
-    @Json(name ="meals") var foods:List<FoodModel>,
-    var succee:Int
+    @Json(name ="harrypotter") var foods:List<FoodModel>,
+    var succeess:Int
 )
