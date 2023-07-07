@@ -8,8 +8,6 @@
 # Architecture  📜
 
 # Build With  🛠
-     |Kotlin| Coroutines |
-     | -- |--|
-     |First class and official programming language for Android development.|  For asynchronous and more.|
+     This site was built using [GitHub Pages](https://pages.github.com/).
 
 # Developed By 😎
