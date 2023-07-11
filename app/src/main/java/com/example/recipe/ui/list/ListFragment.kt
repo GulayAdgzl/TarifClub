@@ -41,4 +41,16 @@ class ListFragment : Fragment() {
         super.onCreateOptionsMenu(menu, inflater)
     }
 
+    //menu de işlem yapmak için
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.show_gry -> ""
+            R.id.show_huff -> ""
+            R.id.show_raven -> ""
+            R.id.show_sly -> ""
+
+        }
+        return true
+    }
+
 }

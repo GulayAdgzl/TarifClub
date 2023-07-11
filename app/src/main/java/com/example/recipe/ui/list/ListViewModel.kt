@@ -14,6 +14,13 @@ enum class RecipesApiStatus {
     ERROR,
     DONE
 }
+enum class  FoodApiFilter(val filterWord:String){
+    SHOW_GRY(filterWord = "Gry"),
+    SHOW_HUFF(filterWord = "Huff"),
+    SHOW_RAVEN(filterWord = "Raven"),
+    SHOW_SLY(filterWord = "Sly")
+
+}
 class ListViewModel: ViewModel() {
 
     //Veri çekme aşamasındaki statelerimi kontrol-güncel tutma
