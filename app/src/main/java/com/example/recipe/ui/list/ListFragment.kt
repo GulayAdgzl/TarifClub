@@ -32,10 +32,12 @@ class ListFragment : Fragment() {
         binding.viewModel=viewModel
 
         binding.rvFood.adapter=FoodAdapter()
+
+        setHasOptionsMenu(true)
     }
     //list_menu için yazdıklarımız
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.list_menu)
+        inflater.inflate(R.menu.list_menu,menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
 
