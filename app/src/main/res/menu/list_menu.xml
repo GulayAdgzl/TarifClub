@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/show_gry" android:title="Show Gry"/>
+    <item android:id="@+id/show_huff" android:title="Show Huff"/>
+    <item android:id="@+id/show_raven" android:title="Show Raven"/>
+    <item android:id="@+id/show_sly" android:title="SLY"/>
+
+</menu>

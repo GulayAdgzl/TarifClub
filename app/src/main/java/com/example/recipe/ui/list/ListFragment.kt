@@ -1,10 +1,9 @@
 package com.example.recipe.ui.list
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import com.example.recipe.R
 import com.example.recipe.databinding.FragmentListBinding
 import com.example.recipe.di.FoodAdapter
 
@@ -13,6 +12,7 @@ class ListFragment : Fragment() {
     private lateinit var binding: FragmentListBinding
 
     private val viewModel:ListViewModel by lazy{ ListViewModel()}
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,6 +32,11 @@ class ListFragment : Fragment() {
         binding.viewModel=viewModel
 
         binding.rvFood.adapter=FoodAdapter()
+    }
+    //list_menu için yazdıklarımız
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.list_menu)
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
 }
