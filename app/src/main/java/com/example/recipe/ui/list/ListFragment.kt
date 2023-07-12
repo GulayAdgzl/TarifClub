@@ -44,10 +44,10 @@ class ListFragment : Fragment() {
     //menu de işlem yapmak için
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.show_gry -> ""
-            R.id.show_huff -> ""
-            R.id.show_raven -> ""
-            R.id.show_sly -> ""
+            R.id.show_gry -> FoodApiFilter.SHOW_GRY
+            R.id.show_huff -> FoodApiFilter.SHOW_HUFF
+            R.id.show_raven -> FoodApiFilter.SHOW_RAVEN
+            R.id.show_sly ->  FoodApiFilter.SHOW_SLY
 
         }
         return true
