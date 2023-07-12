@@ -49,7 +49,7 @@ class ListViewModel: ViewModel() {
             }
         }
     }
-    private fun filterCharacters(filter:FoodApiFilter){
+     fun filterFood(filter:FoodApiFilter){
         viewModelScope.launch{
             _status.value=RecipesApiStatus.LOADING
             try {
