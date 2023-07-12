@@ -14,7 +14,7 @@ enum class RecipesApiStatus {
     ERROR,
     DONE
 }
-enum class  FoodApiFilter(val filterWord:String){
+enum class  FoodApiFilter( val filterWord:String){
     SHOW_GRY(filterWord = "Gry"),
     SHOW_HUFF(filterWord = "Huff"),
     SHOW_RAVEN(filterWord = "Raven"),
@@ -35,7 +35,7 @@ class ListViewModel: ViewModel() {
     init {
         getFood()
     }
-
+    //Tüm karakterleri çağırmak için kullandığım kısım
     private fun getFood() {
         viewModelScope.launch {
             _status.value=RecipesApiStatus.LOADING
@@ -47,6 +47,20 @@ class ListViewModel: ViewModel() {
                 _status.value=RecipesApiStatus.ERROR
                 _foods.value=ArrayList()
             }
+        }
+    }
+    private fun filterCharacters(filter:FoodApiFilter){
+        viewModelScope.launch{
+            _status.value=RecipesApiStatus.LOADING
+            try {
+                _foods.value=FoodApi.retrofitService.filterCharacters(filter.filterWord).foods
+                _status.value=RecipesApiStatus.DONE
+            }catch (e:Exception){
+                _status.value=RecipesApiStatus.ERROR
+                _foods.value=ArrayList()
+            }
+
+
         }
     }
 }

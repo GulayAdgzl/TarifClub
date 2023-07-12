@@ -6,7 +6,11 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.POST
+
 //Base url olmak zorunda
 //https://www.themealdb.com/api/json/v1/1/categories.php
 //https://api.spoonacular.com/
@@ -24,6 +28,10 @@ interface FoodApiServices{
     @GET("all_data.php")
     suspend fun getFood():FoodResponse
 
+    //filter
+    @POST("filter_data.php")
+    @FormUrlEncoded
+    suspend fun filterCharacters(@Field("filter")filter:String):FoodResponse
 }
 object FoodApi{
     val retrofitService:FoodApiServices by lazy { retrofit.create(FoodApiServices::class.java)}
