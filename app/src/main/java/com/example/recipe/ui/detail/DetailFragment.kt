@@ -26,5 +26,7 @@ class DetailFragment : Fragment() {
         binding.lifecycleOwner=this
 
 
+
+
     }
 }
