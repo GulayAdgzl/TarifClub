@@ -18,5 +18,9 @@
         android:id="@+id/detailFragment"
         tools:layout="@layout/fragment_detail"
         android:name="com.example.recipe.ui.detail.DetailFragment"
-        android:label="DetailFragment" />
+        android:label="DetailFragment" >
+        <argument
+            android:name="selectedFood"
+            app:argType="com.example.recipe.data.network.FoodModel" />
+    </fragment>
 </navigation>
