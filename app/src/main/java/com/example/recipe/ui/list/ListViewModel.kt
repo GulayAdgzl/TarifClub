@@ -32,6 +32,11 @@ class ListViewModel: ViewModel() {
     val foods:LiveData<List<FoodModel>>
       get()=_foods
 
+    // for Detail
+    private val _navigateToSelectedFood=MutableLiveData<FoodModel?>()
+    val navigateToSelectedFood:LiveData<FoodModel?>
+       get() = _navigateToSelectedFood
+
     init {
         getFood()
     }
@@ -62,5 +67,15 @@ class ListViewModel: ViewModel() {
 
 
         }
+    }
+    //for detail
+    fun displayFoodDetail(foodModel:FoodModel){
+        _navigateToSelectedFood.value=foodModel
+
+    }
+//Veri gönderimi tamamlandı uyarısı ve bu gönderinin içerisi boşalt
+    fun displayFoodDetailComplete(){
+        _navigateToSelectedFood.value=null
+
     }
 }

@@ -3,6 +3,7 @@ package com.example.recipe.ui.list
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.recipe.R
 import com.example.recipe.databinding.FragmentListBinding
 import com.example.recipe.di.FoodAdapter
@@ -37,10 +38,19 @@ class ListFragment : Fragment() {
         //binding.rvFood.adapter=FoodAdapter()
         binding.rvFood.adapter=foodAdapter
 
+        //for detail
         foodAdapter.onClick={
+            viewModel.displayFoodDetail(it)
 
         }
+        viewModel.navigateToSelectedFood.observe(viewLifecycleOwner){
+            if(it!=null){
+                this.findNavController().navigate(ListFragmentDirections.actionListFragmentToDetailFragment(it))
+                viewModel.
+            }
+        }
 
+        //
         setHasOptionsMenu(true)
     }
     //list_menu için yazdıklarımız
