@@ -5,7 +5,7 @@
     <data>
         <variable
             name="foodModel"
-            type="com.example.recipe.data.network.FoodModel" />
+            type="com.example.recipe.model.FoodModel" />
     </data>
 
 

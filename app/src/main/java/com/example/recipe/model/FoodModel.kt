@@ -1,4 +1,4 @@
-package com.example.recipe.data.network
+package com.example.recipe.model
 
 import android.os.Parcelable
 import com.squareup.moshi.Json

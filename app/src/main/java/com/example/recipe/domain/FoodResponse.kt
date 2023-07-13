@@ -1,6 +1,6 @@
 package com.example.recipe.domain
 
-import com.example.recipe.data.network.FoodModel
+import com.example.recipe.model.FoodModel
 import com.squareup.moshi.Json
 
 data class FoodResponse (

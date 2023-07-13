@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.recipe.data.network.FoodApi
-import com.example.recipe.data.network.FoodModel
+import com.example.recipe.model.FoodModel
 import kotlinx.coroutines.launch
 
 
@@ -69,7 +69,7 @@ class ListViewModel: ViewModel() {
         }
     }
     //for detail
-    fun displayFoodDetail(foodModel:FoodModel){
+    fun displayFoodDetail(foodModel: FoodModel){
         _navigateToSelectedFood.value=foodModel
 
     }

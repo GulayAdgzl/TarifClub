@@ -1,4 +1,4 @@
-package com.example.recipe.di
+package com.example.recipe.ui.main.adapter
 
 import android.view.View
 import android.widget.ImageView
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.recipe.R
-import com.example.recipe.data.network.FoodModel
+import com.example.recipe.model.FoodModel
 import com.example.recipe.ui.list.RecipesApiStatus
 
 @BindingAdapter("listData")

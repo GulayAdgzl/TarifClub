@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.recipe.R
 import com.example.recipe.databinding.FragmentListBinding
-import com.example.recipe.di.FoodAdapter
+import com.example.recipe.ui.main.adapter.FoodAdapter
 
 class ListFragment : Fragment() {
     //first binding name
