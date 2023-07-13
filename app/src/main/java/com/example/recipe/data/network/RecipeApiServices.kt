@@ -12,8 +12,6 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 
 //Base url olmak zorunda
-//https://www.themealdb.com/api/json/v1/1/categories.php
-//https://api.spoonacular.com/
 private const val BASE_URL="https://canerture.com/api/harrypotterapp/"
 private val moshi=Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
 
@@ -31,7 +29,7 @@ interface FoodApiServices{
     //filter
     @POST("filter_data.php")
     @FormUrlEncoded
-    suspend fun filterCharacters(@Field("filter")filter:String):FoodResponse
+    suspend fun filterFood(@Field("filter")filter:String):FoodResponse
 }
 object FoodApi{
     val retrofitService:FoodApiServices by lazy { retrofit.create(FoodApiServices::class.java)}

@@ -58,7 +58,7 @@ class ListViewModel: ViewModel() {
         viewModelScope.launch{
             _status.value=RecipesApiStatus.LOADING
             try {
-                _foods.value=FoodApi.retrofitService.filterCharacters(filter.filterWord).foods
+                _foods.value=FoodApi.retrofitService.filterFood(filter.filterWord).foods
                 _status.value=RecipesApiStatus.DONE
             }catch (e:Exception){
                 _status.value=RecipesApiStatus.ERROR
