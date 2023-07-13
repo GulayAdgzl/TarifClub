@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.recipe.R
 import com.example.recipe.databinding.FragmentDetailBinding
+import com.example.recipe.di.factory.DetailViewModelFactory
 
 class DetailFragment : Fragment() {
 
@@ -26,6 +27,9 @@ class DetailFragment : Fragment() {
         binding.lifecycleOwner=this
 
 
+        //
+        val selectedFood=DetailFragmentArgs.fromBundle(requireArguments()).selectedFood
+        val viewModelFactory=DetailViewModelFactory(selectedFood,requireActivity().application)
 
 
     }

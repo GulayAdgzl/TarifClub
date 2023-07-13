@@ -46,7 +46,7 @@ class ListFragment : Fragment() {
         viewModel.navigateToSelectedFood.observe(viewLifecycleOwner){
             if(it!=null){
                 this.findNavController().navigate(ListFragmentDirections.actionListFragmentToDetailFragment(it))
-                viewModel.
+                viewModel.displayFoodDetailComplete()
             }
         }
 
