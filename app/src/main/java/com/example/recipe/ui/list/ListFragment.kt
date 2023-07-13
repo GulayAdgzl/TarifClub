@@ -13,6 +13,9 @@ class ListFragment : Fragment() {
 
     private val viewModel:ListViewModel by lazy{ ListViewModel()}
 
+    //Detail for
+    private  val foodAdapter by lazy { FoodAdapter() }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,7 +34,12 @@ class ListFragment : Fragment() {
 
         binding.viewModel=viewModel
 
-        binding.rvFood.adapter=FoodAdapter()
+        //binding.rvFood.adapter=FoodAdapter()
+        binding.rvFood.adapter=foodAdapter
+
+        foodAdapter.onClick={
+
+        }
 
         setHasOptionsMenu(true)
     }
