@@ -12,7 +12,7 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 
 //Base url olmak zorunda
-private const val BASE_URL="https://canerture.com/api/harrypotterapp/"
+private const val BASE_URL="https://www.themealdb.com"
 private val moshi=Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
 
 
